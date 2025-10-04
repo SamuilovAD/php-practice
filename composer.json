@@ -1,0 +1,10 @@
+{
+    "name": "samuilov-ad/php-practice",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}

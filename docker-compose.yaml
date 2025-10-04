@@ -1,0 +1,17 @@
+services:
+  php-practice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - composer-data:/composer
+    environment:
+      XDEBUG_CONFIG: client_host=host.docker.internal client_port=9003
+      PHP_IDE_CONFIG: "serverName=php-practice"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    tty: true
+volumes:
+  composer-data: {}
